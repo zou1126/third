@@ -20,6 +20,7 @@ void fork_com(const char* string,const char* filename)
     if(fork()>0)
     {
         write(fd,string,strlen(string));
+        close(fd);
     }
     //子进程
     else
